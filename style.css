@@ -7,167 +7,56 @@
 
 body {
     font-family: sans-serif;
-    margin: 0;
 }
 
-/* Container for content width */
-.container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+/* Remove the styles that were replaced by Bootstrap */
+/* header, nav ul, nav li, nav a, .active, .hero, .option-boxes, .option, .news, .news-item, .services, .service, #contact, footer {
+    ... styles removed ...
+} */
 
-/* Header Styles */
-header {
-    background-color: var(--primary-color);
-    color: var(--light-color);
-    padding: 1rem 0;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav li {
-    margin: 0 1rem;
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--light-color);
-}
-
-/* Active link styles */
-.active {
-    font-weight: bold;
-}
-
-/* Hero Section */
-.hero {
-    background-color: var(--light-color);
-    padding: 2rem 0;
-    text-align: center;
-}
-
-/* Option Boxes */
-.option-boxes {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 2rem 0;
-}
-
+/* Custom styles for option boxes */
 .option {
-    width: 30%;
-    margin-bottom: 20px;
-    padding: 20px;
-    border: 1px solid var(--secondary-color);
     text-align: center;
-    overflow: hidden; /* Added to prevent image overflow */
 }
 
 .option img {
-    width: 100%; 
+    width: 100%;
     height: auto;
     margin-bottom: 10px;
-    display: block; /* Added to prevent image from affecting line height */
+    display: block;
 }
-
 
 .option h3 {
     color: var(--primary-color);
+    margin-bottom: 0.5rem;
 }
 
-/* News Section */
-.news {
-    padding: 2rem 0;
+/* custom styles for the services boxes */
+.service h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
 }
 
-.news h2 {
-    text-align: center;
-    margin-bottom: 2rem;
+/* Ensure that .container does not interfere with Bootstrap's container */
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
+/* Adjust spacing for news items */
 .news-item {
-    width: 48%;
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid var(--secondary-color);
-}
-
-/* Services Section */
-.services {
-    padding: 2rem 0;
-}
-
-.services h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.service {
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid var(--secondary-color);
-}
-
-/* Contact Section */
-#contact {
-    padding: 2rem 0;
-}
-
-#contact h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-#contact form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-#contact label, #contact input, #contact textarea {
-    margin-bottom: 10px;
-}
-
-#contact button {
-    padding: 10px;
-    background-color: var(--primary-color);
-    color: #fff;
-    border: none;
     cursor: pointer;
 }
 
-#contact button:hover {
-    background-color: darken(var(--primary-color), 10%); 
+/* Prevent the footer from overlapping content */
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
-/* Footer */
-footer {
-    background-color: var(--secondary-color);
-    color: var(--light-color);
-    text-align: center;
-    padding: 1rem 0;
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    .option-boxes {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .option {
-        width: 80%;
-    }
-
-    .news-item {
-        width: 100%;
-    }
+main {
+    flex: 1;
 }
